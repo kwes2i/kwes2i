@@ -1,0 +1,9 @@
+# WebStorm / JetBrains IDE files
+.idea/
+*.iml
+# OS generated files
+.DS\_Store
+Thumbs.db
+# Log files & local dev environment
+*.log
+node_modules/

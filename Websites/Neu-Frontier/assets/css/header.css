@@ -1,0 +1,78 @@
+/*
+==============================================
+Header Variables (Default: 390px Mobile Canvas)
+==============================================
+ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+}
+
+.header-container {
+
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    letter-spacing: 0.05em;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--text-white);
+}
+
+/* Header Button */
+
+.btn-demo-header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 9999px;
+    background-color: var(--emerald-primary);
+    color: #042116;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: -0.01em;
+    transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-demo-header:active {
+    transform: scale(0.96);
+}
+.btn-demo-header:hover {
+    opacity: 0.9;
+
+}
+/*
+==============================================
+Tablet & Desktop Media Queries (768px, 1440px)
+==============================================
+ */
+
+/* Tablet Media Query*/
+@media (min-width: 768px){
+
+}
+/* Desktop Media Query*/
+@media (min-width: 1440px){
+
+}
