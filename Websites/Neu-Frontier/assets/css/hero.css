@@ -47,11 +47,10 @@ Hero (Default: 390px Mobile Canvas)
     position: relative;
     z-index: 3;
     width: 100%;
-    padding: 2rem 1.25rem 3.5rem;
+    margin: 12px;
+    background-color: green;
 }
-.hero-subheading {
-    margin-bottom: 24px;
-}
+
 .hero-title {
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -60,8 +59,10 @@ Hero (Default: 390px Mobile Canvas)
 
 /* Buttons */
 .hero-buttons {
+    margin: 24px auto 12px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 12px;
     width: 100%;
 }
@@ -69,9 +70,10 @@ Hero (Default: 390px Mobile Canvas)
 .btn-book, .btn-events {
     flex: 1;
     min-height: 44px;
-    width: 100%;
+    width: calc(100% - 24px);
     border-radius: 9999px;
     font-weight: 600;
+    margin: auto;
 }
 
 .btn-book {

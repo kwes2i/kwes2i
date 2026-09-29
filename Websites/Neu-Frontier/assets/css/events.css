@@ -5,14 +5,17 @@ Events (Default: 390px Mobile Canvas)
  */
 .events {
     margin: 12px;
-    padding: 2.5rem 0 3rem;
+    background-color: red;
+
 }
 .events-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 16px;
-    padding-bottom: 12px;
+    gap: 12px;
+    margin: 0;
+    contain: layout paint;
+    scroll-padding-left: 0;
 }
 
 .event-card {
@@ -20,7 +23,7 @@ Events (Default: 390px Mobile Canvas)
     min-width: 0;
     flex: 0 0 280px;
     width: 280px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -64,6 +67,7 @@ Events (Default: 390px Mobile Canvas)
     object-fit: cover;
     margin-bottom: 12px;
     display: block;
+    background-color: var(--bg-black);
 }
 
 .btn-event-ticket {
