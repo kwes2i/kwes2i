@@ -48,7 +48,6 @@ Hero (Default: 390px Mobile Canvas)
     z-index: 3;
     width: 100%;
     margin: 12px;
-    background-color: green;
 }
 
 .hero-title {

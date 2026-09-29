@@ -1,0 +1,28 @@
+/*
+==============================================
+CSS (Default: 390px Mobile Canvas)
+==============================================*/
+
+.footer {
+    margin: ;
+    width: 100%;
+    height: auto;
+    background-color: var(--gold-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright-menu, .footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    text-transform: uppercase;
+}
+
+.footer-brand .brand-name {
+    margin: auto;
+}

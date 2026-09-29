@@ -1,13 +1,13 @@
 /*
 ==============================================
 Base Variables
-==============================================
- */
+==============================================*/
 
 :root {
     --bg-black: #000000;
     --gold-primary: #d4af37;
     --velvet-red: #991b1b;
+    --velvet-red-bright: #f44336;
     --text-white: #ffffff;
     --text-muted: #a1a1aa;
     --border-dark: rgba(212, 175, 55, 0.2);
@@ -38,4 +38,9 @@ a, button, input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }
