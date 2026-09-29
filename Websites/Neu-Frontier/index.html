@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/base.css"/>
     <link rel="stylesheet" href="assets/css/header.css"/>
     <link rel="stylesheet" href="assets/css/hero.css"/>
-    <link rel="stylesheet" href="assets/css/features.css"/>
+    <link rel="stylesheet" href="assets/css/events.css"/>
+    <link rel="stylesheet" href="assets/css/tables.css"/>
     <link rel="stylesheet" href="assets/css/footer.css"/>
 </head>
 <body>
@@ -22,15 +23,17 @@
         </div>
 
         <!-- CTA -->
-        <a href="#demo" class="btn-demo-header">Book VIP</a>
+        <a href="#book" class="btn-demo-header">Book VIP</a>
     </div>
 </header>
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-media">
         <picture class="hero-image">
-            <source media="(min-width: 768px)" srcset="assets/img/hero-rope-desktop.jpg">
-            <img src="assets/img/hero-rope-mobile.jpg" alt="Club Velvet VIP Entrance" width="1080" height="1350" loading="eager">
+            <source media="(min-width: 768px)" srcset="assets/img/hero/hero-rope-desktop.jpg">
+            <img src="assets/img/hero/hero-rope-mobile.jpg"
+                 alt="Club Velvet VIP Entrance" width="1080" height="1350"
+                 loading="eager">
         </picture>
         <div class="hero-overlay"></div>
     </div>
@@ -44,10 +47,82 @@
         </div>
     </div>
 </section>
-<!-- Core Features -->
+<!-- Events section -->
+<section class="events" id="events">
+    <h2 class="events-title">Upcoming Nights</h2>
+    <div class="events-carousel">
+        <!-- Event #1 -->
+        <div class="event-card">
+            <img src="assets/img/events/hiphop.jpg"
+                 alt="Hip-Hop: Neon & 808s" width="800" height= "1000"
+                 loading="eager" class="event-thumb">
+            <div class="event-info">
+                <span class="event-date">Mon, 1st Jan</span>
+                <div class="scarcity-pill">2 Tables Left</div>
+            </div>
+            <h3 class="event-title">Hip-Hop: Neon & 808s</h3>
+            <a href="#book" class="btn-event-ticket">Book VIP</a>
+        </div>
 
-<!-- E2E Encryption Footer -->
+        <!-- Event #2 -->
+        <div class="event-card">
+            <img src="assets/img/events/rnb.jpg"
+                 alt="RnB: Silk & Spirits" width="800" height= "1000"
+                 loading="lazy" class="event-thumb">
+            <div class="event-info">
+                <span class="event-date">Tue, 2nd Jan</span>
+                <div class="scarcity-pill">4 Tables Left</div>
+            </div>
+            <h3 class="event-title">RnB: Silk & Spirits</h3>
+            <a href="#book" class="btn-event-ticket">Book VIP</a>
+        </div>
 
+        <!-- Event #3 -->
+        <div class="event-card">
+            <img src="assets/img/events/techno.jpg"
+                 alt="Techno: Lasers & Bass" width="800" height= "1000"
+                 loading="lazy" class="event-thumb">
+            <div class="event-info">
+                <span class="event-date">Wed, 3rd Jan</span>
+                <div class="scarcity-pill">VIP Available</div>
+            </div>
+            <h3 class="event-title">Techno: Lasers & Bass</h3>
+            <a href="#book" class="btn-event-ticket">Book VIP</a>
+        </div>
+
+        <!-- Event #4 -->
+        <div class="event-card">
+            <img src="assets/img/events/dj.jpg"
+                 alt="DJ Kwes2i: Live & Direct" width="800" height= "1000"
+                 loading="lazy" class="event-thumb">
+            <div class="event-info">
+                <span class="event-date">Thur, 4th Jan</span>
+                <div class="scarcity-pill">Guestlist Closing</div>
+            </div>
+            <h3 class="event-title">DJ Kwes2i: Live & Direct</h3>
+            <a href="#book" class="btn-event-ticket">Book Guestlist</a>
+        </div>
+
+        <!-- Event #5 -->
+        <div class="event-card">
+            <img src="assets/img/events/disco.jpg"
+                 alt="Disco: Velvet & Chrome" width="800" height= "1000"
+                 loading="lazy" class="event-thumb">
+            <div class="event-info">
+                <span class="event-date">Fri, 5th Jan</span>
+                <div class="scarcity-pill">3 Tables Left</div>
+            </div>
+            <h3 class="event-title">Disco: Velvet & Chrome</h3>
+            <a href="#book" class="btn-event-ticket">Book VIP</a>
+        </div>
+    </div>
+</section>
+
+<!-- VIP Tables section -->
+<section class="tables" id="book">
+</section>
+
+<!-- Footer -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
