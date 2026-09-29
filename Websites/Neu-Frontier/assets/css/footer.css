@@ -4,25 +4,140 @@ CSS (Default: 390px Mobile Canvas)
 ==============================================*/
 
 .footer {
-    margin: ;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-black);
     width: 100%;
-    height: auto;
-    background-color: var(--gold-primary);
+    margin: 0;
+    padding: 0.75rem 0.75rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Layer 1: BG */
+.footer-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.footer-background {
+    background-color: var(--velvet-red);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center bottom;
+    opacity: 0.4;
+}
+
+/* Layer 2: Veil */
+.footer-veil {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0.75) 75%,
+            rgba(0, 0, 0, 0.98) 100%
+    );
+}
+/* Layer 3: Content */
+.footer-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+/* Content elements*/
+.footer-brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-brand .brand-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-indent: 0.25em;
+    letter-spacing: 0.25em;
+}
+.brand-name-sub {
+    color: var(--text-muted);
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
 
-.footer-copyright-menu, .footer-brand {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-copyright {
+.footer-btn-book,
+.footer-btn-events {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-white);
+    background: transparent;
+    border: none;
     text-transform: uppercase;
 }
 
-.footer-brand .brand-name {
+.footer-copyright-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    justify-content: space-between;
+    margin: 0 1.25rem;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-transform: uppercase;
+}
+
+.footer-disclaimer {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+}
+
+.footer-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.footer-contact-title {
+    font-size: 1.25rem;
     margin: auto;
+}
+
+.footer-btn-privacy,
+.footer-btn-cookie {
+    font-size: 0.75rem;
+    color: var(--text-muted);
 }
