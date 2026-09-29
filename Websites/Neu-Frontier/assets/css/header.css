@@ -1,6 +1,6 @@
 /*
 ==============================================
-Header Variables (Default: 390px Mobile Canvas)
+Header (Default: 390px Mobile Canvas)
 ==============================================
  */
 
@@ -47,7 +47,7 @@ Header Variables (Default: 390px Mobile Canvas)
     min-height: 44px;
     padding: 0 16px;
     border-radius: 9999px;
-    background-color: var(--emerald-primary);
+    background-color: var(--gold-primary);
     color: #042116;
     font-weight: 600;
     font-size: 0.8125rem;

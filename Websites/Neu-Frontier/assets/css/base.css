@@ -6,10 +6,11 @@ Base Variables
 
 :root {
     --bg-black: #000000;
-    --emerald-primary: #10b981;
+    --gold-primary: #d4af37;
+    --velvet-red: #991b1b;
     --text-white: #ffffff;
-    --text-muted: #94a3b8;
-    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #a1a1aa;
+    --border-dark: rgba(212, 175, 55, 0.2);
 
 }
 
