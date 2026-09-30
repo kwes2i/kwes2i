@@ -1,77 +1,172 @@
-/*
-==============================================
-Header (Default: 390px Mobile Canvas)
-==============================================*/
+/* ==========================================================================
+   Header & Navigation (Mobile Default: 24.375rem / 390px Canvas)
+   ========================================================================== */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--gold-secondary);
+    width: 100%;
+    background-color: rgba(16, 0, 0, 0.82);
+    -webkit-backdrop-filter: blur(0.75rem);
+    backdrop-filter: blur(0.75rem);
+    border-bottom: 1px solid var(--border-dark);
 }
 
 .header-container {
-    margin: 0;
-    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
-    border-radius: 0;
-    background-color: transparent;
-    border: none;
-    letter-spacing: 0.05em;
+    padding: 0.875rem 1.25rem;
 }
 
+/* Brand Identity */
 .brand-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
 }
 
 .brand-name {
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
     color: var(--text-white);
+    text-transform: uppercase;
+    line-height: 1;
 }
 
-/* Header Button */
+.brand-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-top: 0.25rem;
+}
+
+/* Navigation Links (Desktop Anchor) */
+.nav-menu {
+    display: none;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold-primary);
+}
+
+/* Actions & Button */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
 
 .btn-demo-header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    padding: 0 16px;
-    border-radius: 9999px;
+    min-height: 2.75rem; /* 44px HIG minimum touch target */
+    padding: 0 1.25rem;
+    border-radius: 2px;
+    border: 1px solid var(--gold-primary);
     background-color: var(--gold-primary);
     color: var(--bg-black);
-    font-weight: 600;
-    font-size: 0.8125rem;
-    letter-spacing: 0.1em;
-    transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-demo-header:hover {
+    background-color: transparent;
+    color: var(--gold-primary);
 }
 
 .btn-demo-header:active {
-    transform: scale(0.96);
+    transform: scale(0.97);
 }
-.btn-demo-header:hover {
-    opacity: 0.9;
 
+.btn-demo-header:focus-visible {
+    outline: 2px solid var(--gold-primary);
+    outline-offset: 2px;
 }
-/*
-==============================================
-Tablet & Desktop Media Queries (768px, 1440px)
-==============================================
- */
 
-/* Tablet Media Query*/
-@media (min-width: 768px){
+/* ==========================================================================
+   Tablet Scaling (min-width: 48rem / 768px)
+   ========================================================================== */
 
+@media (min-width: 48rem) {
+    .header-container {
+        padding: 1.125rem 2rem;
+    }
+
+    .brand-name {
+        font-size: 1.15rem;
+        letter-spacing: 0.2em;
+    }
+
+    .brand-sub {
+        font-size: 0.65rem;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 0.875rem;
+    }
+
+    .btn-demo-header {
+        min-height: 2.75rem;
+        padding: 0 1.5rem;
+        font-size: 0.8125rem;
+    }
 }
-/* Desktop Media Query*/
-@media (min-width: 1440px){
 
+/* ==========================================================================
+   Desktop / 1440p Scaling (min-width: 90rem / 1440px)
+   ========================================================================== */
+
+@media (min-width: 90rem) {
+    .header-container {
+        padding: 1.25rem 2.5rem;
+    }
+
+    .brand-name {
+        font-size: 1.35rem;
+        letter-spacing: 0.22em;
+    }
+
+    .brand-sub {
+        font-size: 0.7rem;
+    }
+
+    .nav-menu {
+        gap: 3rem;
+    }
+
+    .nav-link {
+        font-size: 0.875rem;
+        letter-spacing: 0.16em;
+    }
+
+    .btn-demo-header {
+        min-height: 2.875rem; /* 46px */
+        padding: 0 1.75rem;
+        font-size: 0.8125rem;
+    }
 }

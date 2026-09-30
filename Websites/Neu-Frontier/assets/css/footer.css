@@ -1,24 +1,22 @@
-/*
-==============================================
-CSS (Default: 390px Mobile Canvas)
-==============================================*/
+/* ==========================================================================
+   Footer Section (Default: Mobile 24.375rem / 390px Canvas)
+   ========================================================================== */
 
 .footer {
     position: relative;
     overflow: hidden;
     background-color: var(--bg-black);
     width: 100%;
-    margin: 0;
-    padding: 4rem 0.75rem 3rem;
+    padding: 4rem 1.25rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* Layer 1: BG */
+
+/* Layer 1: Background Media */
 .footer-media {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -30,103 +28,160 @@ CSS (Default: 390px Mobile Canvas)
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     object-position: center bottom;
-    opacity: 0.4;
+    display: block;
+    opacity: 0.35;
 }
 
-/* Layer 2: Veil */
+/* Layer 2: Color Veil Gradient */
 .footer-veil {
     position: absolute;
-    z-index: 2;
     inset: 0;
+    z-index: 2;
     pointer-events: none;
     background: linear-gradient(
             180deg,
             var(--bg-black) 0%,
-            rgba(0, 0, 0, 0.5) 30%,
-            rgba(0, 0, 0, 0.75) 75%,
-            rgba(0, 0, 0, 0.98) 100%
+            rgba(16, 0, 0, 0.6) 35%,
+            rgba(16, 0, 0, 0.85) 75%,
+            var(--bg-black) 100%
     );
 }
-/* Layer 3: Content */
+
+/* Layer 3: Interactive Content Stack */
 .footer-content {
     position: relative;
     z-index: 3;
     width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-/* Content elements*/
+/* ==========================================================================
+   Brand & Navigation Stack
+   ========================================================================== */
+
 .footer-brand {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
     align-items: center;
-    justify-content: space-between;
-}
-
-.brand-name-sub{
-    color: var(--gold-primary);
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
+    gap: 0.35rem;
 }
 
 .footer-brand .brand-name {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
     color: var(--text-white);
+    text-transform: uppercase;
+    line-height: 1;
 }
 
+.brand-name-sub {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+}
 
+/* Navigation Links */
 .footer-menu {
-    margin-top: auto;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .footer-btn-book,
 .footer-btn-events {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--text-white);
-    background: transparent;
-    border: none;
+    transition: color 0.2s ease;
+}
+
+.footer-btn-book:hover,
+.footer-btn-events:hover {
+    color: var(--gold-primary);
+}
+
+/* ==========================================================================
+   Legal & Copyright Meta
+   ========================================================================== */
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
     text-transform: uppercase;
 }
 
 .footer-copyright-menu {
     display: flex;
     flex-direction: row;
-    gap: 1.25rem;
-    justify-content: space-between;
-    margin: 0 1.25rem;
-}
-
-.footer-copyright {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    text-transform: uppercase;
-}
-
-.footer-disclaimer {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    letter-spacing: 0.04em;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .footer-btn-privacy,
 .footer-btn-cookie {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
     color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.footer-btn-privacy:hover,
+.footer-btn-cookie:hover {
+    color: var(--text-white);
+}
+
+.footer-disclaimer {
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Tablet & Desktop Media Queries
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+    .footer {
+        padding: 5rem 2rem 4rem;
+    }
+
+    .footer-brand .brand-name {
+        font-size: 1.75rem;
+    }
+
+    .footer-menu {
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    .footer {
+        padding: 6rem 2.5rem 4.5rem;
+    }
+
+    .footer-content {
+        gap: 2.5rem;
+    }
+
+    .footer-brand .brand-name {
+        font-size: 2rem;
+        letter-spacing: 0.25em;
+    }
 }

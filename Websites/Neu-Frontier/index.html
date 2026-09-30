@@ -3,182 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neu-Frontier | All-in-One Venue Console</title>
+    <title>Club Velvet | Mayfair, After Hours</title>
+
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="assets/css/base.css"/>
-    <link rel="stylesheet" href="assets/css/header.css"/>
-    <link rel="stylesheet" href="assets/css/hero.css"/>
-    <link rel="stylesheet" href="assets/css/events.css"/>
-    <link rel="stylesheet" href="assets/css/vip.css"/>
-    <link rel="stylesheet" href="assets/css/footer.css"/>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+    <link rel="stylesheet" href="assets/css/vip.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
-<!-- Sticky Navigation Bar -->
-    <header class="header">
+
+<!-- ================================================================= -->
+<!-- Navigation Bar Section                                            -->
+<!-- ================================================================= -->
+<header class="header">
     <div class="header-container">
-        <!-- Brand Title -->
-        <div class="brand-wrapper">
-            <span class="brand-name">CLUB VELVET</span>
+        <a href="#" class="brand-wrapper">
+            <span class="brand-name">Club Velvet</span>
+            <span class="brand-sub">Mayfair</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="#events" class="nav-link">Events</a>
+            <a href="#book" class="nav-link">VIP Tables</a>
+            <a href="#about" class="nav-link">The Club</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="#book" class="btn-demo-header">Book VIP</a>
         </div>
-        <!-- CTA -->
-        <a href="#book" class="btn-demo-header">Book VIP</a>
     </div>
 </header>
-<!-- Hero Section -->
-    <section class="hero">
+
+<!-- ================================================================= -->
+<!-- Hero Section                                                      -->
+<!-- ================================================================= -->
+<section class="hero">
     <div class="hero-media">
         <picture class="hero-image">
-            <source media="(min-width: 768px)" srcset="assets/img/hero/hero-rope-desktop.jpg">
+            <source media="(min-width: 48rem)" srcset="assets/img/hero/hero-rope-desktop.jpg">
             <img src="assets/img/hero/hero-rope-mobile.jpg"
-                 alt="Club Velvet VIP Entrance" width="1080" height="1350"
+                 alt="Club Velvet VIP Entrance"
+                 width="1080"
+                 height="1350"
                  loading="eager">
         </picture>
         <div class="hero-overlay"></div>
     </div>
-    <!-- Hero text & CTA -->
+
     <div class="hero-container">
         <span class="hero-kicker">MAYFAIR // AFTER HOURS</span>
         <h1 class="hero-title">Your night, own it.</h1>
         <p class="hero-title-desc">
             Curated soundscapes, unforgettable nights, and discreet bottle service
-            behind the velvet drape. Discover what's next at Club Velvet.</p>
+            behind the velvet drape. Discover what's next at Club Velvet.
+        </p>
         <div class="hero-buttons">
             <a href="#events" class="btn-events">Explore Events</a>
             <a href="#book" class="btn-book">Book VIP</a>
         </div>
     </div>
 </section>
-<!-- Events section -->
-    <section class="events" id="events">
+
+<!-- ================================================================= -->
+<!-- Events Section                                                    -->
+<!-- ================================================================= -->
+<section class="events" id="events">
     <h2 class="event-header">Upcoming Events</h2>
-        <div class="events-carousel">
-            <!-- Event #1 -->
-            <div class="event-card">
-                <img src="assets/img/events/hiphop.jpg"
-                     alt="Neon & 808s" width="800" height="1000"
-                     loading="eager" class="event-thumb">
-                <div class="event-details">
-                    <span class="event-date">Mon 1st Jan</span>
-                    <h3 class="event-title">Neon & 808s</h3>
-                    <span class="event-genre">Hip-Hop / Trap</span>
-                    <a href="#book" class="btn-event-ticket">Book VIP · 1 Table Left</a>
-                </div>
-            </div>
-            <!-- Event #2 -->
-            <div class="event-card">
-                <img src="assets/img/events/rnb.jpg"
-                     alt="Silk & Spirits" width="800" height="1000"
-                     loading="eager" class="event-thumb">
-                <div class="event-details">
-                    <span class="event-date">Tue 2nd Jan</span>
-                    <h3 class="event-title">Silk & Spirits</h3>
-                    <span class="event-genre">R&B / Soul</span>
-                    <a href="#book" class="btn-event-ticket">Book VIP · 3 Tables Left</a>
-                </div>
-            </div>
-            <!-- Event #3 -->
-            <div class="event-card">
-                <img src="assets/img/events/techno.jpg"
-                     alt="Lasers & Bass" width="800" height="1000"
-                     loading="lazy" class="event-thumb">
-                <div class="event-details">
-                    <span class="event-date">Wed 3rd Jan</span>
-                    <h3 class="event-title">Lasers & Bass</h3>
-                    <span class="event-genre">Techno / Electro</span>
-                    <a href="#book" class="btn-event-ticket">Book VIP · 2 Tables Left</a>
-                </div>
-            </div>
-            <!-- Event #4 -->
-            <div class="event-card">
-                <img src="assets/img/events/dj.jpg"
-                     alt="Live & Direct" width="800" height="1000"
-                     loading="lazy" class="event-thumb">
-                <div class="event-details">
-                    <span class="event-date">Thur 4th Jan</span>
-                    <h3 class="event-title">Live & Direct</h3>
-                    <span class="event-genre">Afro House / Amapiano</span>
-                    <a href="#book" class="btn-event-ticket">View VIP · Guest List</a>
-                </div>
-            </div>
-            <!-- Event #5 -->
-            <div class="event-card">
-                <img src="assets/img/events/disco.jpg"
-                     alt="Velvet & Chrome" width="800" height="1000"
-                     loading="lazy" class="event-thumb">
-                <div class="event-details">
-                    <span class="event-date">Fri 5th Jan</span>
-                    <h3 class="event-title">Velvet & Chrome</h3>
-                    <span class="event-genre">Nu-Disco / Classics</span>
-                    <a href="#book" class="btn-event-ticket">View VIP · Tables Available</a>
-                </div>
+
+    <div class="events-carousel">
+        <!-- Event #1 -->
+        <div class="event-card">
+            <img src="assets/img/events/hiphop.jpg"
+                 alt="Neon & 808s"
+                 width="800"
+                 height="1000"
+                 loading="eager"
+                 class="event-thumb">
+            <div class="event-details">
+                <span class="event-date">Mon 1st Jan</span>
+                <h3 class="event-title">Neon & 808s</h3>
+                <span class="event-genre">Hip-Hop / Trap</span>
+                <a href="#book" class="btn-event-ticket">Book VIP &middot; 1 Table Left</a>
             </div>
         </div>
+
+        <!-- Event #2 -->
+        <div class="event-card">
+            <img src="assets/img/events/rnb.jpg"
+                 alt="Silk & Spirits"
+                 width="800"
+                 height="1000"
+                 loading="eager"
+                 class="event-thumb">
+            <div class="event-details">
+                <span class="event-date">Tue 2nd Jan</span>
+                <h3 class="event-title">Silk & Spirits</h3>
+                <span class="event-genre">R&B / Soul</span>
+                <a href="#book" class="btn-event-ticket">Book VIP &middot; 3 Tables Left</a>
+            </div>
+        </div>
+
+        <!-- Event #3 -->
+        <div class="event-card">
+            <img src="assets/img/events/techno.jpg"
+                 alt="Lasers & Bass"
+                 width="800"
+                 height="1000"
+                 loading="lazy"
+                 class="event-thumb">
+            <div class="event-details">
+                <span class="event-date">Wed 3rd Jan</span>
+                <h3 class="event-title">Lasers & Bass</h3>
+                <span class="event-genre">Techno / Electro</span>
+                <a href="#book" class="btn-event-ticket">Book VIP &middot; 2 Tables Left</a>
+            </div>
+        </div>
+
+        <!-- Event #4 -->
+        <div class="event-card">
+            <img src="assets/img/events/dj.jpg"
+                 alt="Live & Direct"
+                 width="800"
+                 height="1000"
+                 loading="lazy"
+                 class="event-thumb">
+            <div class="event-details">
+                <span class="event-date">Thu 4th Jan</span>
+                <h3 class="event-title">Live & Direct</h3>
+                <span class="event-genre">Afro House / Amapiano</span>
+                <a href="#book" class="btn-event-ticket">View VIP &middot; Guest List</a>
+            </div>
+        </div>
+
+        <!-- Event #5 -->
+        <div class="event-card">
+            <img src="assets/img/events/disco.jpg"
+                 alt="Velvet & Chrome"
+                 width="800"
+                 height="1000"
+                 loading="lazy"
+                 class="event-thumb">
+            <div class="event-details">
+                <span class="event-date">Fri 5th Jan</span>
+                <h3 class="event-title">Velvet & Chrome</h3>
+                <span class="event-genre">Nu-Disco / Classics</span>
+                <a href="#book" class="btn-event-ticket">View VIP &middot; Tables Available</a>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- VIP Tables section -->
-    <section class="vip" id="book">
-        <h2 class="vip-title">Our VIP Sections</h2>
-        <div class="vip-container">
-            <div class="vip-card">
-                <div class="vip-media">
-                    <img src="assets/img/vip/stage-vip.jpg" alt="Stage VIP Table"
-                         width="800" height="600" loading="lazy"
-                         class="vip-thumb">
-                </div>
-                <div class="vip-info">
-                    <h3 class="vip-card-title">Stage VIP</h3>
-                    <p class="vip-desc">Up to 10 Guests · Beside DJ</p>
-                    <div class="vip-spend">£1,500 Minimum</div>
-                    <button class="btn-select-vip"
-                            data-tier="stage-vip">Reserve VIP</button>
-                </div>
+
+<!-- ================================================================= -->
+<!-- VIP Tables Section                                                -->
+<!-- ================================================================= -->
+<section class="vip" id="book">
+    <h2 class="vip-title">Our VIP Sections</h2>
+
+    <div class="vip-container">
+        <!-- Stage VIP -->
+        <div class="vip-card">
+            <div class="vip-media">
+                <img src="assets/img/vip/stage-vip.jpg"
+                     alt="Stage VIP Table"
+                     width="800"
+                     height="600"
+                     loading="lazy"
+                     class="vip-thumb">
             </div>
-            <div class="vip-card">
-                <div class="vip-media">
-                    <img src="assets/img/vip/main-vip.jpg" alt="Main VIP Table"
-                         width="800" height="600" loading="lazy"
-                         class="vip-thumb">
-                </div>
-                <div class="vip-info">
-                    <h3 class="vip-card-title">Main VIP</h3>
-                    <p class="vip-desc">Up to 6 Guests · Dancefloor</p>
-                    <div class="vip-spend">£500 Minimum</div>
-                    <button class="btn-select-vip"
-                            data-tier="main-vip">Reserve VIP</button>
-                </div>
+            <div class="vip-info">
+                <h3 class="vip-card-title">Stage VIP</h3>
+                <p class="vip-desc">Up to 10 Guests &middot; Beside DJ</p>
+                <div class="vip-spend">&pound;1,500 Minimum</div>
+                <button class="btn-select-vip" data-tier="stage-vip">Reserve VIP</button>
             </div>
         </div>
-    </section>
-<!-- Footer -->
+
+        <!-- Main VIP -->
+        <div class="vip-card">
+            <div class="vip-media">
+                <img src="assets/img/vip/main-vip.jpg"
+                     alt="Main VIP Table"
+                     width="800"
+                     height="600"
+                     loading="lazy"
+                     class="vip-thumb">
+            </div>
+            <div class="vip-info">
+                <h3 class="vip-card-title">Main VIP</h3>
+                <p class="vip-desc">Up to 6 Guests &middot; Dancefloor</p>
+                <div class="vip-spend">&pound;500 Minimum</div>
+                <button class="btn-select-vip" data-tier="main-vip">Reserve VIP</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- Footer Section                                                    -->
+<!-- ================================================================= -->
 <footer class="footer">
-<!-- Layer 1: BG Media  -->
     <div class="footer-media">
         <img src="assets/img/footer/footer-champagne.jpg"
-             width="800" height="1200" loading="lazy"
-             alt="Footer Background" class="footer-background">
+             width="800"
+             height="1200"
+             loading="lazy"
+             alt="Footer Background"
+             class="footer-background">
     </div>
-<!-- Layer 2: Veil -->
+
     <div class="footer-veil"></div>
-<!-- Layer 3: Content -->
+
     <div class="footer-content">
         <div class="footer-brand">
             <span class="brand-name">CLUB VELVET</span>
             <p class="brand-name-sub">18+ // Valid ID Required</p>
         </div>
+
         <div class="footer-menu">
             <a href="#events" class="footer-btn-events">Events</a>
             <a href="#book" class="footer-btn-book">Reservations</a>
         </div>
-        <div class="footer-newsletter"></div>
+
         <div class="footer-copyright">
             <div class="footer-copyright-menu">
                 <a href="#privacy" class="footer-btn-privacy">Privacy Policy</a>
                 <a href="#cookie" class="footer-btn-cookie">Cookie Policy</a>
             </div>
-            <p class="footer-disclaimer">2026 Club Velvet. All Rights Reserved.</p>
+            <p class="footer-disclaimer">&copy; 2026 Club Velvet. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
-<!-- JS -->
-    <script src="assets/js/main.js"></script>
+
+<!-- Scripts -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>

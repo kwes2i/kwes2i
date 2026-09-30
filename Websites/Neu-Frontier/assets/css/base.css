@@ -4,6 +4,7 @@ Base Variables
 ==============================================*/
 
 :root {
+    /* Color Palette*/
     --bg-black: #100000;
     --bg-black-secondary: #1e0000;
     --gold-primary: #caa151;
@@ -12,49 +13,90 @@ Base Variables
     --velvet-red-bright: #f44336;
     --text-white: #f6efe6;
     --text-muted: #8a827e;
+
+    /* Overlays & Accents */
     --border-dark: rgba(212, 175, 55, 0.2);
     --velvet-glow: rgba(140, 20, 35, 0.5);
+
+    /* Typography */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-* {
+/*
+==============================================
+Box Sizing & Resets
+==============================================
+*/
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
 body {
     background-color: var(--bg-black);
     color: var(--text-white);
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+img,
+picture {
+    max-width: 100%;
+    display: block;
 }
 
-a, button, input {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-button {
-    background-color: transparent;
-    border: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-white);
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--text-white);
+    margin-bottom: 1rem;
 }
 
-p, a, span {
-    color: var(--text-white);
+/*
+==========================================================================
+   Interactive Controls & Accessibility
+==========================================================================
+*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button,
+[role="button"],
+.btn-demo-header,
+.btn-events,
+.btn-book,
+.btn-event-ticket,
+.btn-select-vip {
+    min-height: 44px;
+    min-width: 44px;
 }

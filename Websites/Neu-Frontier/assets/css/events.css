@@ -1,103 +1,196 @@
-/*
-==============================================
-Events (Default: 390px Mobile Canvas)
-==============================================*/
+/* ==========================================================================
+   Events Section (Default: Mobile 390px)
+   ========================================================================== */
+
 .events {
-    margin: 0.75rem 0;
-    padding: 0.75rem;
+    width: 100%;
+    padding: 3rem 0;
     background-color: var(--bg-black);
-
 }
 
-.events-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 12px;
-    margin: 0;
-    contain: layout paint;
-    scroll-padding-left: 0;
-}
-
-.event-card {
-    position: relative;
-    min-width: 0;
-    flex: 0 0 280px;
-    width: 280px;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: var(--bg-black-secondary);
-    border-radius: 36px;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.event-title {
-    position: static;
-    z-index: 2;
+.event-header {
+    max-width: 80rem;
+    margin: 0 auto 1.5rem;
+    padding: 0 1.25rem;
     font-size: 1.5rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--text-white);
-    margin-bottom: 8px;
 }
 
+/* Horizontal Snap Carousel */
+.events-carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 1.25rem;
+    padding: 0 1.25rem 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.events-carousel::-webkit-scrollbar {
+    display: none; /* Chrome / Safari */
+}
+
+/* Event Card Component */
+.event-card {
+    flex: 0 0 15rem; /* ~240px wide on mobile */
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-black-secondary);
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.event-thumb {
+    width: 100%;
+    height: 160px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background-color: var(--bg-black);
+}
+
+/* Metadata & Text */
 .event-details {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 12px;
+    flex-grow: 1;
+    padding: 1rem;
 }
 
-/*Thumbnail styling*/
 .event-date {
-    display: block;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--gold-primary);
-    margin-bottom: 4px;
+    margin-bottom: 0.35rem;
 }
-.event-thumb {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    display: block;
-    background-color: var(--bg-black);
+
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-white);
+    margin-bottom: 0.25rem;
 }
 
 .event-genre {
-    display: block;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    letter-spacing: 0.06em;
     color: var(--text-muted);
+    margin-bottom: 1.25rem;
 }
 
+/* Ticket CTA */
 .btn-event-ticket {
-    margin: auto;
-    min-height: 44px;
+    margin-top: auto;
     width: 100%;
-    color: var(--bg-black);
-    border: 2px solid var(--border-dark);
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 24px;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+    border-radius: 2px;
+    border: 1px solid var(--gold-primary);
     background-color: var(--gold-primary);
+    color: var(--bg-black);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
 }
+
+.btn-event-ticket:hover {
+    background-color: transparent;
+    color: var(--gold-primary);
+}
+
 .btn-event-ticket:active {
-    background-color: rgba(212, 175, 55, 0.15);
-    border-color: var(--gold-primary);
+    transform: scale(0.98);
 }
 
 .btn-event-ticket:focus-visible {
-    border-color: var(--gold-primary);
-    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4);
-    outline: none;
+    outline: 2px solid var(--gold-primary);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Tablet Scaling (min-width: 768px / 48rem)
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+    .events {
+        padding: 4rem 0;
+    }
+
+    .event-header {
+        font-size: 1.75rem;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .events-carousel {
+        padding: 0 2rem 1.5rem;
+        gap: 1.25rem;
+        scroll-padding-left: 2rem;
+    }
+
+    .event-card {
+        flex: 0 0 18.5rem;
+    }
+}
+
+/* ==========================================================================
+   Desktop Grid Layout (min-width: 1024px / 64rem)
+   ========================================================================== */
+
+@media (min-width: 64rem) {
+    .events {
+        padding: 5rem 0;
+    }
+
+    .event-header {
+        max-width: 80rem;
+        padding: 0 2.5rem;
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+    }
+
+    /* Convert horizontal swipe strip into an editorial 5-column grid */
+    .events-carousel {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: visible;
+        scroll-snap-type: none;
+        gap: 1.25rem;
+    }
+
+    .event-thumb {
+        height: 140px; /* Keeps the full 5-card row compact on desktop */
+        aspect-ratio: 16 / 9;
+    }
+
+    .event-card:hover {
+        border-color: rgba(202, 161, 81, 0.6);
+        transform: translateY(-4px);
+    }
+
+    .event-title {
+        font-size: 1.125rem;
+    }
 }
