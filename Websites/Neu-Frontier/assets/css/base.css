@@ -4,13 +4,16 @@ Base Variables
 ==============================================*/
 
 :root {
-    --bg-black: #000000;
-    --gold-primary: #d4af37;
+    --bg-black: #100000;
+    --gold-primary: #caa151;
+    --gold-secondary: #232119;
     --velvet-red: #991b1b;
     --velvet-red-bright: #f44336;
-    --text-white: #ffffff;
-    --text-muted: #a1a1aa;
+    --text-white: #f6efe6;
+    --text-muted: #8a827e;
     --border-dark: rgba(212, 175, 55, 0.2);
+    --velvet-glow: rgba(140, 20, 35, 0.5);
+    --text-primary: #f6efe6;
 }
 
 * {
