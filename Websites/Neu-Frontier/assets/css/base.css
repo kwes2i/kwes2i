@@ -5,6 +5,7 @@ Base Variables
 
 :root {
     --bg-black: #100000;
+    --bg-black-secondary: #1e0000;
     --gold-primary: #caa151;
     --gold-secondary: #232119;
     --velvet-red: #991b1b;
@@ -13,7 +14,6 @@ Base Variables
     --text-muted: #8a827e;
     --border-dark: rgba(212, 175, 55, 0.2);
     --velvet-glow: rgba(140, 20, 35, 0.5);
-    --text-primary: #f6efe6;
 }
 
 * {
@@ -46,4 +46,15 @@ a, button, input {
 button {
     background-color: transparent;
     border: none;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+p, a, span {
+    color: var(--text-white);
 }

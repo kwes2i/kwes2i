@@ -8,6 +8,7 @@ Events (Default: 390px Mobile Canvas)
     background-color: var(--bg-black);
 
 }
+
 .events-carousel {
     display: flex;
     overflow-x: auto;
@@ -27,61 +28,68 @@ Events (Default: 390px Mobile Canvas)
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: var(--bg-black);
-    border-radius: 16px;
+    background-color: var(--bg-black-secondary);
+    border-radius: 36px;
     top: 0;
     left: 0;
     right: 0;
 }
 
 .event-title {
-    position: absolute;
-
+    position: static;
     z-index: 2;
-    padding: 12px 12px 40px;
-    background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.85) 0%,
-            rgba(0, 0, 0, 0.4) 60%,
-            transparent 100%
-    );
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-.event-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     margin-bottom: 8px;
-    padding: 0 12px;
 }
-/*Thumbnail styling*/
 
+.event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+/*Thumbnail styling*/
+.event-date {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold-primary);
+    margin-bottom: 4px;
+}
 .event-thumb {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    margin-bottom: 12px;
     display: block;
     background-color: var(--bg-black);
 }
 
+.event-genre {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
 .btn-event-ticket {
-    margin: auto 12px 12px 12px;
+    margin: auto;
     min-height: 44px;
-    width: calc(100% - 24px);
-    color: var(--text-white);
+    width: 100%;
+    color: var(--bg-black);
     border: 2px solid var(--border-dark);
     font-size: 1rem;
     font-weight: 600;
     padding: 4px 10px;
-    border-radius: 9999px;
-    background: transparent;
+    border-radius: 24px;
+    background-color: var(--gold-primary);
 }
 .btn-event-ticket:active {
     background-color: rgba(212, 175, 55, 0.15);
@@ -92,16 +100,4 @@ Events (Default: 390px Mobile Canvas)
     border-color: var(--gold-primary);
     box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4);
     outline: none;
-}
-
-.scarcity-pill {
-    background: transparent;
-    color: var(--velvet-red);
-    border: none;
-    font-size: 0.75rem;
-    border-radius: 9999px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    gap: 8px;
 }

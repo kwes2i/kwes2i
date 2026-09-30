@@ -11,7 +11,7 @@ Hero (Default: 390px Mobile Canvas)
     min-height: 85vh;
     display: flex;
     align-items: flex-end;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.75rem;
 }
 
 .hero-media {
@@ -36,7 +36,6 @@ Hero (Default: 390px Mobile Canvas)
     background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.2) 40%,
     rgba(0, 0, 0, 0.85) 85%,
     var(--bg-black) 100%
     );
@@ -52,16 +51,31 @@ Hero (Default: 390px Mobile Canvas)
 }
 
 .hero-title {
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     color: var(--text-white);
+    font-size: 48px;
+    line-height: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-kicker {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero-title-desc {
+    color: var(--text-muted);
 }
 
 /* Buttons */
 .hero-buttons {
     margin: 24px auto 12px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     gap: 12px;
     width: 100%;
@@ -77,15 +91,16 @@ Hero (Default: 390px Mobile Canvas)
 }
 
 .btn-book {
-    background-color: var(--gold-primary);
-    color: #000000; }
-
-.btn-events {
     border: 2px solid var(--border-dark);
     background: transparent;
 }
 
-.btn-events:active {
-    background-color: rgba(212, 175, 55, 0.15);
+.btn-events {
+    background-color: var(--gold-primary);
+    color: var(--bg-black);
+}
+
+.btn-book:active {
+    background-color: var(--gold-secondary);
     border-color: var(--gold-primary);
 }
